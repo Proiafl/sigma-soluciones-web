@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import sigmaLogo from "@/assets/sigma-logo.jpeg";
 
 const navLinks = [
   { label: "Inicio", href: "#inicio" },
@@ -19,13 +20,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#inicio" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary rounded-sm flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg" style={{ fontFamily: 'Space Grotesk' }}>Σ</span>
-            </div>
-            <span className="text-foreground font-semibold text-lg tracking-tight" style={{ fontFamily: 'Space Grotesk' }}>
-              SIGMA
-            </span>
+          <a href="#inicio" className="flex items-center">
+            <img src={sigmaLogo} alt="Sigma Mantenimiento Integral" className="h-10 md:h-12 w-auto brightness-0 invert" />
           </a>
 
           {/* Desktop Links */}
